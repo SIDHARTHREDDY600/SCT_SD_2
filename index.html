@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Guess</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hero-section" class="screen active">
+        <div class="content-wrapper">
+            <h1 class="main-title">THE<br>GUESS</h1>
+            <p class="subtitle">A game of intuition and chance.</p>
+            <button id="start-btn" class="btn primary">Begin</button>
+        </div>
+    </div>
+
+    <div id="game-section" class="screen">
+        <div class="content-wrapper">
+            <div class="game-container">
+                <h2 class="section-title">Search for the number</h2>
+                <div class="input-group">
+                    <input type="number" id="guess-input" min="1" max="100" placeholder="1 - 100">
+                    <button id="guess-btn" class="btn primary">Guess</button>
+                </div>
+                <div class="feedback-area">
+                    <p id="hint-text"></p>
+                    <p class="attempts">Attempts: <span id="attempt-count">0</span></p>
+                    <div class="history-area">
+                        <p class="history-title">History</p>
+                        <div id="guess-history" class="history-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="victory-section" class="screen dark-theme">
+        <div class="content-wrapper">
+            <h1 class="main-title">CORRECT</h1>
+            <p class="subtitle">You found the number in <span id="final-attempts">0</span> attempts.</p>
+            <button id="restart-btn" class="btn secondary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

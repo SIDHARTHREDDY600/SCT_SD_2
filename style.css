@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1ddd3;
+    color: #2b1818;
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    display: none;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.dark-theme {
+    background-color: #341212;
+    color: #f1ddd3;
+}
+
+.content-wrapper {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+    color: #341212;
+}
+
+.dark-theme .subtitle {
+    color: #f1ddd3;
+}
+
+.btn {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.btn.primary {
+    background-color: #341212;
+    color: #f1ddd3;
+}
+
+.btn.primary:hover {
+    background-color: #2b1818;
+    color: #ff69c8;
+}
+
+.btn.secondary {
+    background-color: #f1ddd3;
+    color: #341212;
+    border: 1px solid #f1ddd3;
+}
+
+.btn.secondary:hover {
+    background-color: transparent;
+    color: #f1ddd3;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 5rem 2rem 4rem;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 10px 30px rgba(43, 24, 24, 0.05);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input[type="number"] {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 150px;
+    border: 1px solid #341212;
+    background: transparent;
+    color: #2b1818;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #ff69c8;
+}
+
+.feedback-area {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+#hint-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #ff69c8;
+    margin-bottom: 1rem;
+    min-height: 2.5rem;
+}
+
+.attempts {
+    font-size: 1.2rem;
+    color: #2b1818;
+}
+
+.history-area {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f1ddd3;
+}
+
+.history-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #341212;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.history-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.history-item {
+    background-color: #f1ddd3;
+    color: #341212;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 4rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    input[type="number"] {
+        width: 100%;
+    }
+}
